@@ -3,7 +3,9 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
+        protocol: "https",
         hostname: "specials-images.forbesimg.com",
+        pathname: "**",
       },
     ],
   },

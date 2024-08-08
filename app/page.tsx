@@ -9,7 +9,7 @@ async function getBillions() {
 export default async function Home() {
   const billions = await getBillions();
 
-  console.log(billions);
+  // console.log(billions);
 
   return (
     <main>
@@ -17,7 +17,7 @@ export default async function Home() {
         <div className="max-w-screen-lg w-full mx-auto px-5">
           <div className="grid grid-cols-4 gap-5">
             {billions.map((a: any, i: number) => (
-              <BillionsItem {...a} key={i} />
+              <BillionsItem initialBillions={a} key={i} />
             ))}
           </div>
         </div>
